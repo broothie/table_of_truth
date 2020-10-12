@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    table-of-truth (0.1.0)
+      colorize (~> 0.8.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize (~> 0.8.1)
+  table-of-truth!
+
+BUNDLED WITH
+   2.1.4
