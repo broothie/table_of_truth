@@ -7,7 +7,7 @@ A gem for comparing boolean expressions.
 Create a table:
 ```ruby
 # Require the gem
-require 'table-of-truth'
+require 'table_of_truth'
 
 table = TableOfTruth.new do
   # Define inputs
@@ -44,5 +44,5 @@ table.print! # outputs the following:
 
 or, check equivalency:
 ```ruby
-table.equivalent? # => true if all expressions are equal for all input combinations
+table.equivalent? #=> true if all expressions are equal for all input combinations
 ```

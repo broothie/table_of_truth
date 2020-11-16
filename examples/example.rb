@@ -19,5 +19,6 @@ table = TableOfTruth.new do
   end
 end
 
-table.print!
-table.equivalent? # true or false, depending of whether expressions are equal for all input combinations
+table.print!      #=> prints the truth table
+table.equivalent? #=> true if all expressions are equal for all input combinations
+table.results     #=> get the results as an array of hashes
