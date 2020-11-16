@@ -1,23 +1,23 @@
-require 'table-of-truth'
+require 'table_of_truth'
 
-table = TruthTable.new do
-  input :enabled?
-  input :available?
+table = TableOfTruth.new do
+  input :something_enabled?
+  input :result_of_expensive_call?
 
-  expression :early_check do |inputs|
-    if inputs[:enabled?]
-      inputs[:available?]
+  expression 'early check' do
+    if result_of_expensive_call?
+      something_enabled?
     else
       true
     end
   end
 
-  expression :late_check do |inputs|
-    next false if !inputs[:available?] && inputs[:enabled?]
+  expression 'late check' do
+    next false if !something_enabled? && result_of_expensive_call?
 
     true
   end
 end
 
 table.print!
-puts "equivalent: #{table.equivalent?}"
+table.equivalent? # true or false, depending of whether expressions are equal for all input combinations

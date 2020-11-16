@@ -1,0 +1,18 @@
+
+publish do |otp|
+  invoke :clean
+  invoke :build
+  invoke :push, otp
+end
+
+build do
+  sh 'gem build'
+end
+
+push do |otp|
+  sh "gem push *.gem --otp #{otp}"
+end
+
+clean do
+  sh 'rm -rf *.gem'
+end

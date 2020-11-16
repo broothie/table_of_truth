@@ -1,20 +1,29 @@
 PATH
   remote: .
   specs:
-    table-of-truth (0.1.0)
+    table_of_truth (0.1.1)
       colorize (~> 0.8.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    coderay (1.1.3)
     colorize (0.8.1)
+    method_source (1.0.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rake (13.0.1)
+    spud (0.1.18)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  colorize (~> 0.8.1)
-  table-of-truth!
+  pry (~> 0.13.1)
+  rake (~> 13.0)
+  spud (~> 0.1.18)
+  table_of_truth!
 
 BUNDLED WITH
    2.1.4
